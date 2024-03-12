@@ -32,6 +32,21 @@ class: center, middle, inverse, title-slide
 ---
 
 
+
+
+```
+## Warning: package 'xaringan' was built under R version 4.3.3
+```
+
+```
+## Warning: package 'xaringanExtra' was built under R version 4.3.3
+```
+
+```
+## Warning: package 'knitr' was built under R version 4.3.2
+```
+
+
 # Why? The Necessity of a New Paradigm
 
 &lt;div style="display: flex; align-items: center; justify-content: space-between;"&gt;
@@ -137,6 +152,113 @@ class: center
 
 ---
 
+# How to predict the air quality index selected by the user
+
+### The technical workflow behind the APP
+
+&lt;img src="img/technical_workflow.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Data preparation stage
+
+### Three sources
+
+*1.* Air pollution data (air quality indicators) 
+
+Source: AQI, monitoring station
+
+| Variable | Units | Effect |
+|----------|-------|--------|
+| `\(O_{3}, PM2.5, SO_{2}, CO, NO_{2}\)` | `\(\mu g / m^{3}\)` | As the dependent variable, will be predicted |
+
+---
+
+# Data preparation stage 2
+
+*2.* Meteorological data 
+
+Source: AQI, monitoring station
+
+Effect:
+
+- Related studies show that meteorological variables can affect air quality
+
+- Provide more potentially influential variables
+
+| Variable | Units | 
+|----------|-------|
+| Temperature | Degrees celsius |
+| Relative humidity | Percentage |
+| Solar radiation | `\(W/m^{2}\)` |
+| Wind speed | `\(m/s\)` |
+| Precipitation|$Mm$ |
+| Wind direction | Degrees |
+| Pressure | `\(Mb\)` |
+
+---
+
+# Data preparation stage 3
+
+*3.* Remote sensing data
+
+Landsat-8 data
+
+| Variable | Units | Effect |
+|----------|-------|--------|
+| Band 1-7 | Surface reflectance | Sunlight directly affects air quality |
+| NDVI, SAVI, EVI | - | Vegetation is also related to air quality |
+| LST | Degrees celsius | Related studies have also considered LST as a potential influencing factor |
+
+normalised difference vegetation index (NDVI)
+
+soil-adjusted vegetation index (SAVI)
+
+enhanced vegetation index (EVI)
+
+land surface temperature (LST)
+
+---
+
+# Modelling stage
+
+#### Predict air quality indicators using land use regression (LUR) models
+
+  Four machine learning techniques:
+
+multiple linear regression (MLR), multilayer perceptron (MLP), 
+support vector regression (SVR), random forest regression (RFR)
+  
+
+  Model building process:
+
+  - Select independent variables (user select )
+  
+  - Select dependent variables, using Bayesian information criteria (BIC) 
+  
+  - Determine metrics (RMSE, `\(R^{2}\)`)
+  
+  - Divide the dataset into train, validation and test set, 
+  
+  - Spatial cross-validation
+  
+  - Train and test the four models, and choose a better model
+  
+  - Execute prediction
+
+---
+
+# Visualization stage
+
+### What is presented to the user is an interactive map
+
+Using geographical information from remote sensing data, prediction results can be displayed on an interactive map in real time.
+
+Similar visualization:
+
+&lt;img src="img/visual_result.gif" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
 class: center, middle
 
 # Thanks!
