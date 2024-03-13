@@ -4,7 +4,7 @@
     <title>The revolutionary platform redefining environmental protection and policy-making through data-driven insights.</title>
     <meta charset="utf-8" />
     <meta name="author" content="" />
-    <meta name="date" content="2024-03-12" />
+    <meta name="date" content="2024-03-13" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
@@ -26,7 +26,7 @@ class: center, middle, inverse, title-slide
 ### RStudio, PBC
 ]
 .date[
-### 2024-03-12
+### 2024-03-13
 ]
 
 ---
@@ -34,17 +34,8 @@ class: center, middle, inverse, title-slide
 
 
 
-```
-## Warning: package 'xaringan' was built under R version 4.3.3
-```
 
-```
-## Warning: package 'xaringanExtra' was built under R version 4.3.3
-```
 
-```
-## Warning: package 'knitr' was built under R version 4.3.2
-```
 
 
 # Why? The Necessity of a New Paradigm
@@ -164,7 +155,7 @@ class: center
 
 ### Three sources
 
-*1.* Air pollution data (air quality indicators) 
+*1.* Air pollution data (air quality indicators)
 
 Source: AQI, monitoring station
 
@@ -180,11 +171,7 @@ Source: AQI, monitoring station
 
 Source: AQI, monitoring station
 
-Effect:
-
-- Related studies show that meteorological variables can affect air quality
-
-- Provide more potentially influential variables
+Effect: Related studies &lt;a name=cite-Liu2007&gt;&lt;/a&gt;&lt;a name=cite-Zhang2018&gt;&lt;/a&gt;([Liu, Franklin, Kahn, and Koutrakis, 2007](#bib-Liu2007); [Zhang, Chu, Wang, and Zhang, 2018](#bib-Zhang2018)) show that meteorological variables can affect air quality
 
 | Variable | Units | 
 |----------|-------|
@@ -206,17 +193,11 @@ Landsat-8 data
 
 | Variable | Units | Effect |
 |----------|-------|--------|
-| Band 1-7 | Surface reflectance | Sunlight directly affects air quality |
-| NDVI, SAVI, EVI | - | Vegetation is also related to air quality |
-| LST | Degrees celsius | Related studies have also considered LST as a potential influencing factor |
+| Band 1-7 | Surface reflectance | Used to calculate other variables |
+| NDVI, SAVI, EVI | - | Vegetation is also related to air quality &lt;a name=cite-Jia2014a&gt;&lt;/a&gt;&lt;a name=cite-Zhang2016a&gt;&lt;/a&gt;([Jia, Liang, Zhang, Wei, Yao, and Xie, 2014](#bib-Jia2014a); [Zhang, Hu, Lian, Fan, Ouyang, and Ye, 2016](#bib-Zhang2016a)) |
+| LST | Degrees celsius | Related studies have also considered LST as a potential influencing factor &lt;a name=cite-Chen2014&gt;&lt;/a&gt;([Chen, Han, Chen, and Tong, 2014](#bib-Chen2014)) |
 
-normalised difference vegetation index (NDVI)
-
-soil-adjusted vegetation index (SAVI)
-
-enhanced vegetation index (EVI)
-
-land surface temperature (LST)
+Normalised difference vegetation index (NDVI), soil-adjusted vegetation index (SAVI), enhanced vegetation index (EVI), land surface temperature (LST)
 
 ---
 
@@ -224,39 +205,93 @@ land surface temperature (LST)
 
 #### Predict air quality indicators using land use regression (LUR) models
 
-  Four machine learning techniques:
-
+Four machine learning techniques: 
 multiple linear regression (MLR), multilayer perceptron (MLP), 
 support vector regression (SVR), random forest regression (RFR)
-  
 
-  Model building process:
+Model building process:
 
-  - Select independent variables (user select )
+- Select independent variables (user select )
   
-  - Select dependent variables, using Bayesian information criteria (BIC) 
+- Select dependent variables, using Bayesian information criteria (BIC) 
   
-  - Determine metrics (RMSE, `\(R^{2}\)`)
+- Determine metrics (RMSE, `\(R^{2}\)`)
   
-  - Divide the dataset into train, validation and test set, 
+- Divide the dataset into train, validation and test set, 
   
-  - Spatial cross-validation
+- Spatial cross-validation
   
-  - Train and test the four models, and choose a better model
+- Train and test the four models, and choose a better model
   
-  - Execute prediction
+- Execute prediction
+
+Source: &lt;a name=cite-Alvarez-Mendoza2019&gt;&lt;/a&gt;&lt;a name=cite-Lopez2023&gt;&lt;/a&gt;([Alvarez-Mendoza, Teodoro, and Ramirez-Cando, 2019](#bib-Alvarez-Mendoza2019); [López, 2023](#bib-Lopez2023))
 
 ---
 
 # Visualization stage
 
-### What is presented to the user is an interactive map
+#### What is presented to the user is an interactive map
 
 Using geographical information from remote sensing data, prediction results can be displayed on an interactive map in real time.
 
 Similar visualization:
 
-&lt;img src="img/visual_result.gif" width="60%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/visual_result.gif" width="50%" style="display: block; margin: auto;" /&gt;
+
+Source: &lt;a name=cite-UrbanEmissionsInfo2024&gt;&lt;/a&gt;([UrbanEmissions.Info, 2024](#bib-UrbanEmissionsInfo2024))
+---
+
+# References
+
+&lt;a name=bib-Alvarez-Mendoza2019&gt;&lt;/a&gt;[Alvarez-Mendoza, C. I., A.
+Teodoro, and L. Ramirez-Cando](#cite-Alvarez-Mendoza2019) (2019).
+"Spatial Estimation of Surface Ozone Concentrations in Quito Ecuador
+with Remote Sensing Data, Air Pollution Measurements and Meteorological
+Variables". In: _Environmental Monitoring and Assessment_ 191.3, p.
+155.
+
+&lt;a name=bib-Chen2014&gt;&lt;/a&gt;[Chen, Y., W. Han, S. Chen, et
+al.](#cite-Chen2014) (2014). "Estimating Ground-Level PM2.5
+Concentration Using Landsat 8 in Chengdu, China". In: _Remote Sensing
+of the Atmosphere, Clouds, and Precipitation V_. Vol. 9259. SPIE, pp.
+193-206.
+
+&lt;a name=bib-Jia2014a&gt;&lt;/a&gt;[Jia, K., S. Liang, L. Zhang, et
+al.](#cite-Jia2014a) (2014). "Forest Cover Classification Using Landsat
+ETM+ Data and Time Series MODIS NDVI Data". In: _International Journal
+of Applied Earth Observation and Geoinformation_ 33, pp. 32-38.
+
+&lt;a name=bib-Liu2007&gt;&lt;/a&gt;[Liu, Y., M. Franklin, R. Kahn, et
+al.](#cite-Liu2007) (2007). "Using Aerosol Optical Thickness to Predict
+Ground-Level PM2.5 Concentrations in the St. Louis Area: A Comparison
+between MISR and MODIS". In: _Remote Sensing of Environment_.
+Multi-Angle Imaging SpectroRadiometer (MISR) Special Issue 107.1, pp.
+33-44.
+
+&lt;a name=bib-Lopez2023&gt;&lt;/a&gt;[López, S., ed.](#cite-Lopez2023) (2023).
+_Socio-Environmental Research in Latin America: Interdisciplinary
+Approaches Using GIS and Remote Sensing Frameworks_. The Latin American
+Studies Book Series. Cham: Springer International Publishing. ISBN:
+978-3-031-22679-3 978-3-031-22680-9.
+
+---
+
+# References 2
+
+&lt;a
+name=bib-UrbanEmissionsInfo2024&gt;&lt;/a&gt;[UrbanEmissions.Info](#cite-UrbanEmissionsInfo2024)
+(2024). _Air Quality Analysis for Mumbai (Bombay)-Thane, India_.
+
+&lt;a name=bib-Zhang2016a&gt;&lt;/a&gt;[Zhang, J., J. Hu, J. Lian, et
+al.](#cite-Zhang2016a) (2016). "Seeing the Forest from Drones: Testing
+the Potential of Lightweight Drones as a Tool for Long-Term Forest
+Monitoring". In: _Biological Conservation_ 198, pp. 60-69.
+
+&lt;a name=bib-Zhang2018&gt;&lt;/a&gt;[Zhang, X., Y. Chu, Y. Wang, et
+al.](#cite-Zhang2018) (2018). "Predicting Daily PM2.5 Concentrations in
+Texas Using High-Resolution Satellite Aerosol Optical Depth". In:
+_Science of The Total Environment_ 631-632, pp. 904-911.
 
 ---
 class: center, middle

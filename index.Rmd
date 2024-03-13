@@ -13,12 +13,24 @@ output:
       countIncrementalSlides: false
 ---
 
-
-```{r xaringan-all, echo=FALSE, results='hide'}
+```{r xaringan-all, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
 library(xaringan)
 library(xaringanExtra)
 library(knitr)
-xaringanExtra::use_panelset()
+library(RefManageR)
+library(knitcitations)
+```
+
+
+```{r echo=FALSE}
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = "authoryear",
+           style = "markdown",
+           hyperlink = TRUE,
+           dashed = FALSE,
+           no.print.fields=c("doi", "url", "urldate", "issn"))
+myBib <- ReadBib("./CASA0023_Group_Presentation.bib", check = FALSE)
 ```
 
 
@@ -144,7 +156,7 @@ knitr::include_graphics('img/technical_workflow.png')
 
 ### Three sources
 
-*1.* Air pollution data (air quality indicators) 
+*1.* Air pollution data (air quality indicators)
 
 Source: AQI, monitoring station
 
@@ -160,11 +172,7 @@ Source: AQI, monitoring station
 
 Source: AQI, monitoring station
 
-Effect:
-
-- Related studies show that meteorological variables can affect air quality
-
-- Provide more potentially influential variables
+Effect: Related studies `r Citep(myBib,"Liu2007", "Zhang2018")` show that meteorological variables can affect air quality
 
 | Variable | Units | 
 |----------|-------|
@@ -186,17 +194,11 @@ Landsat-8 data
 
 | Variable | Units | Effect |
 |----------|-------|--------|
-| Band 1-7 | Surface reflectance | Sunlight directly affects air quality |
-| NDVI, SAVI, EVI | - | Vegetation is also related to air quality |
-| LST | Degrees celsius | Related studies have also considered LST as a potential influencing factor |
+| Band 1-7 | Surface reflectance | Used to calculate other variables |
+| NDVI, SAVI, EVI | - | Vegetation is also related to air quality `r Citep(myBib,"Jia2014a", "Zhang2016a")` |
+| LST | Degrees celsius | Related studies have also considered LST as a potential influencing factor `r Citep(myBib,"Chen2014")` |
 
-normalised difference vegetation index (NDVI)
-
-soil-adjusted vegetation index (SAVI)
-
-enhanced vegetation index (EVI)
-
-land surface temperature (LST)
+Normalised difference vegetation index (NDVI), soil-adjusted vegetation index (SAVI), enhanced vegetation index (EVI), land surface temperature (LST)
 
 ---
 
@@ -204,40 +206,57 @@ land surface temperature (LST)
 
 #### Predict air quality indicators using land use regression (LUR) models
 
-  Four machine learning techniques:
-
+Four machine learning techniques: 
 multiple linear regression (MLR), multilayer perceptron (MLP), 
 support vector regression (SVR), random forest regression (RFR)
-  
 
-  Model building process:
+Model building process:
 
-  - Select independent variables (user select )
+- Select independent variables (user select )
   
-  - Select dependent variables, using Bayesian information criteria (BIC) 
+- Select dependent variables, using Bayesian information criteria (BIC) 
   
-  - Determine metrics (RMSE, $R^{2}$)
+- Determine metrics (RMSE, $R^{2}$)
   
-  - Divide the dataset into train, validation and test set, 
+- Divide the dataset into train, validation and test set, 
   
-  - Spatial cross-validation
+- Spatial cross-validation
   
-  - Train and test the four models, and choose a better model
+- Train and test the four models, and choose a better model
   
-  - Execute prediction
+- Execute prediction
+
+Source: `r Citep(myBib,"Alvarez-Mendoza2019", "Lopez2023")`
 
 ---
 
 # Visualization stage
 
-### What is presented to the user is an interactive map
+#### What is presented to the user is an interactive map
 
 Using geographical information from remote sensing data, prediction results can be displayed on an interactive map in real time.
 
 Similar visualization:
 
-```{r echo=FALSE, out.width='60%', fig.align='center'}
+```{r echo=FALSE, out.width='50%', fig.align='center'}
 knitr::include_graphics('img/visual_result.gif')
+```
+
+Source: `r Citep(myBib,"UrbanEmissions.Info2024")`
+---
+
+# References
+
+```{r results='asis', echo=FALSE, warning=FALSE}
+PrintBibliography(myBib, start = 1, end = 5)
+```
+
+---
+
+# References 2
+
+```{r results='asis', echo=FALSE, warning=FALSE}
+PrintBibliography(myBib, start = 6, end = 100)
 ```
 
 ---
