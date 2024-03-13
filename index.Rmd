@@ -34,6 +34,53 @@ myBib <- ReadBib("./CASA0023_Group_Presentation.bib", check = FALSE)
 ```
 
 
+# Policies: Global Agendas
+
+·**Global Agendas Alignment**: UNFCCC Article 4, New Urban Agenda (65, 75, 79), and SDGs (3, 11, 13).
+
+| **United Nations Framework Convention on Climate Change** | **New Urban Agenda**     | **SDGs**    |
+|:----------------------------------------------------:|:--------------------:|:-------:|
+| Chapter 4 Commitment                                 | ...                  | ...     |
+| (b) Formulate, implement, publish and regularly update national and, where appropriate, regional programmes containing measures to mitigate climate change **by addressing anthropogenic emissions by sources and removals by sinks** of all greenhouse gases not controlled by the Montreal Protocol, and measures to facilitate **adequate adaptation** to climate change                | 65. We commit ourselves to facilitating the sustainable management of natural resources in **cities and human settlements** in a manner that **protects and improves the urban ecosystem** and environmental services, **reduces greenhouse gas emissions and air pollution** and promotes disaster risk reduction and management, by supporting the development of disaster risk reduction strategies and periodical assessments of disaster risk caused by natural and human-made hazards, including standards for risk levels, while **fostering sustainable economic development and protecting the well-being and quality of life of all persons** through environmentally sound urban and territorial planning, infrastructure and basic services.     | **Goal 3: Ensure healthy lives and promote well-being for all at all ages**: Health and population: **reduce the number of deaths and illnesses from hazardous chemicals and pollution**. |
+| (c) Promote and cooperate in the development, application and diffusion, including transfer, of technologies, practices and processes that **control, reduce or prevent anthropogenic emissions of greenhouse gases** not controlled by the Montreal Protocol in all relevant sectors, including the *energy, transport, industry, agriculture, forestry and waste management sectors*    | 75. We commit ourselves to encouraging national, subnational and local governments, as appropriate, to **develop sustainable, renewable and affordable energy and energy-efficient buildings and construction modes** and to promoting energy conservation and efficiency, which are essential to enable the **reduction of greenhouse gas** and black carbon emissions, ensure sustainable consumption and production patterns, help create new decent jobs, **improve public health** and reduce the costs of energy supply.  | Goal 11: Make cities and human settlements inclusive, safe, resilient and sustainable: The Johannesburg Plan of Implementation (JPOI) provided multiple anchor points for **sustainable transport**, in the context of infrastructure, public transport systems, goods delivery networks, affordability, efficiency and convenience of transportation, as well as **improving urban air quality and health**, and **reduce greenhouse gas emissions**.  |
+| (d) **Promote sustainable management**, and promote and cooperate in the conservation and enhancement, as appropriate, of **sinks and reservoirs of all greenhouse gases** not controlled by the Montreal Protocol, including biomass, forests and oceans as well as *other terrestrial, coastal and marine ecosystems*; | 79. We commit ourselves to promoting international, national, subnational and local climate action, including **climate change adaptation and mitigation**, and to supporting the efforts of cities and human settlements, their inhabitants and all local stakeholders as important implementers. We further commit ourselves to **supporting building resilience and reducing emissions of greenhouse gases** from all relevant sectors. Such measures should be consistent with the goals of the Paris Agreement adopted under the United Nations Framework Convention on Climate Change, including holding the increase in the global average temperature to well below 2 degrees Celsius above pre- industrial levels and pursuing efforts to limit the temperature increase to 1.5 degrees Celsius above pre-industrial levels. | Goal 13: Take urgent action to combat climate change and its impacts: The 2030 Agenda for Sustainable Development, through paragraph 31 “calls for the widest possible international cooperation aimed at **accelerating the reduction of global greenhouse gas emissions** and addressing adaptation to the adverse impacts of climate change”. |
+Source:[UNFCCC](https://unfccc.int/resource/docs/convkp/conveng.pdf), [The New Urban Agenda](https://habitat3.org/the-new-urban-agenda/), [SDGs](https://sdgs.un.org/goals)
+
+---
+
+# Policies: Local Actions I
+
+**Location Actions Alignment**: Mumbai Climate Action Plan 2022
+
+<div class="row">
+  <div class="col-md-6">
+    <img src="img/MCAP2022IntegratedMobility.png" alt="img/Integrated Mobility" style="width:100%;">
+    <h3>Integrated Mobility</h3>
+    <ul>
+      <li><strong>Improve public transport ridership</strong>
+        <p>Improving reliability, interconnectivity...</p>
+      </li>
+      <li><strong>Access to non-motorized transport (NMT)</strong>
+        <p>Currently, only 22%...</p>
+      </li>
+      <!-- Add more items here -->
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <img src="MCAP2022AirQuality.png" alt="Air Quality" style="width:100%;">
+    <h3>Air Quality</h3>
+    <ul>
+      <li><strong>Curb the pollution concentration level</strong>
+        <p>Mumbai has higher concentrations...</p>
+      </li>
+      <li><strong>Increase information availability</strong>
+        <p>Improving stationary and dynamic...</p>
+      </li>
+      <!-- Add more items here -->
+    </ul>
+  </div>
+</div>
+
 # Why? The Necessity of a New Paradigm
 
 <div style="display: flex; align-items: center; justify-content: space-between;">
