@@ -1,16 +1,17 @@
 ---
-title: " The revolutionary platform redefining environmental protection and policy-making through data-driven insights."
-subtitle: "⚔<br/>with xaringan"
+title: " 到时候再说 没力气想了"
+subtitle: "Fuck"
 author: ""
-institute: "RStudio, PBC"
+institute: "UCL"
 date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
-    css: ["custom.css", "default"]   
+    css: xaringan-themer.css  
     lib_dir: libs
     nature:
       highlightStyle: github
       highlightLines: true
+      ratio: 16:9
       countIncrementalSlides: false
 ---
 
@@ -40,10 +41,111 @@ BibOptions(check.entries = FALSE,
 myBib <- ReadBib("./CASA0023_Group_Presentation.bib", check = FALSE)
 ```
 
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF"
+)
+```
 
-## Policies: Global Agendas
+---
+class: center, middle
+# Part 1 – 1 Background
 
-·**Global Agendas Alignment**: United Nations Framework Convention on Climate Change (UNFCCC) Article 4, New Urban Agenda (65, 75, 79), and SDGs (3, 11, 13).
+---
+## Background - Location
+Located on the west coast of India.Financial centre, the largest city in India.
+
+```{r echo=FALSE,out.width='55%',fig.align='center'}
+knitr::include_graphics('Figure/Figure Part 1-1/Location.png')
+```
+.normal-font[
+Source: [Kumar, 2020](https://www.researchgate.net/figure/Geographical-location-of-Mumbai-and-total-confirmed-cases-as-on-July-25-2020-This-map_fig1_344086001)
+]
+
+---
+## Background - Identified the Problem
+Industry, vehicles and buildings pollutants affected in Mumbai, which has a population of 12 million. The Swiss IQAir Group ranks Mumbai as the sixth most polluted city in the world.
+
+```{r echo=FALSE, out.width='100%', fig.align='center'}
+knitr::include_graphics('Figure/Figure Part 1-1/pi.png')
+```
+
+Source: [Bloomberg,2023](file:///Users/liuzhengyong/Zotero/storage/CMV4YPQA/https://www.bloomberg.com/news/newsletters/2023-01-30/mumbai-s-skyrocketing-pollution-set-to-worsen-health-crisis?embedded-checkout=true) 
+
+
+
+---
+## Background - Where the pollution comes from? 
+```{r xaringan-panelset-1, echo=FALSE}
+xaringanExtra::use_panelset()
+```
+
+.panelset[
+.panel[.panel-name[**Waste Incineration**]
+* **7,000-7,500 metric tons** of solid waste per day.
+
+* Toxic fumes may pose a hazard to the area within **5-10 km** of the landfill site.
+
+* Toxic fumes from the burning of waste can travel within a **radius of 15 km**.
+
+* **78% of people** living near landfills are likely to be exposed to high levels of pollution from landfill sites.
+
+Source: [The Indian Express,2023](https://indianexpress.com/article/cities/mumbai/mumbai-holds-its-breath-alarm-bells-ring-but-no-ones-listening-8991358/)
+
+Source: [Anjana Pasricha,2023](https://www.voanews.com/a/mumbai-becomes-second-indian-mega-city-to-battle-dirty-air/7334181.html)
+]
+
+.panel[.panel-name[**Transport and large-scale urban development**]
+* **80%** of Mumbai's carbon emissions come from road transport.
+
+* Paved and unpaved roads **Dust**.
+
+* Dust pollution from subway construction accounts for **3%** of the total pollution.
+
+* Construction works account for **8%** of total emissions.
+
+Source: [mint, 2023](https://www.livemint.com/news/world/china-asks-banks-insurers-in-hong-kong-to-reveal-lgfv-holdings-11710445044497.html)
+
+Source: [Time of India, 2023](https://timesofindia.indiatimes.com/city/mumbai/why-mumbai-is-getting-a-choking-feeling-like-delhi/articleshow/105051675.cms)
+
+Source: [The Indian Express, 2023](https://indianexpress.com/article/opinion/columns/in-mumbai-clearing-the-dust-lifting-the-haze-9011135/)
+]
+
+.panel[.panel-name[**Slums and industrial pollution**]
+* Industrial and power plant emissions account for about **36%** of total pollution.
+
+* Slums are home to **more than 50%** of the city's population.
+
+* The use of fuel for living in slums is responsible for about **27%** of pollution.
+
+* Pollution is exacerbated by poor ventilation and the presence of indoor emission sources.
+
+Source: [IndiaSpend, 2023](https://www.indiaspend.com/pollution/why-mumbai-had-poor-air-quality-in-october-880329)
+
+Source: [Times of India, 2023](https://timesofindia.indiatimes.com/india/is-wind-direction-to-blame-for-mumbais-air-pollution/articleshow/105041205.cms)
+]
+]
+
+---
+## Background - What impact behind on this problem
+
+| Aspect           | Details                                                                                                           |
+|------------------|-------------------------------------------------------------------------------------------------------------------|
+| **Economic**     | - Estimated annual loss of about $150 million (2021)<br>- Average claim amounts for infectious diseases increased from about INR 30,000 to nearly 80,000 (2023)<br>- Cost of treatment for common diseases requiring hospitalization doubled in five years (2023)<br>- Indian hotels and tourism industry suffered three-quarters of economic losses, estimated at 150 billion INR (2022) |
+| **Environmental**| - Mumbai, with a population of over 20 million, shrouded in heavy smog for consecutive days (2021)<br>- Over 90% live in areas where air quality is below WHO standards (2022)<br>- Multidimensional pollution affecting ecology, water sources, etc.<br>- High pollution causes losses of about $150 billion annually to Indian businesses (2021) |
+| **Human Life**| - “Significant increase” in patients visiting for respiratory diseases (2022)<br>- 25% increase in outpatient cases related to such diseases (2023)<br>- Doctors deal with 4,000 cases of diphtheria and typhoid daily (2023)                                               |
+
+---
+class: center, middle
+# Part 1 – 2 Policies
+
+---
+## Policies - Global Agendas
+
+**Global Agendas Alignment**: United Nations Framework Convention on Climate Change (UNFCCC) Article 4, New Urban Agenda (65, 75, 79), and SDGs (3, 11, 13).
 
 .panelset[
 .panel[.panel-name[**UNFCCC I**]
@@ -52,6 +154,12 @@ myBib <- ReadBib("./CASA0023_Group_Presentation.bib", check = FALSE)
 
 * (b) Formulate, implement, publish and regularly update national and, where appropriate, regional programmes containing measures to mitigate climate change **by addressing anthropogenic emissions by sources and removals by sinks** of all greenhouse gases not controlled by the Montreal Protocol, and measures to facilitate **adequate adaptation** to climate change
 
+.normal-font[
+Source: [UNFCCC](https://unfccc.int/resource/docs/convkp/conveng.pdf)
+]
+]
+
+.panel[.panel-name[**UNFCCC II**]
 * (c) Promote and cooperate in the development, application and diffusion, including transfer, of technologies, practices and processes that **control, reduce or prevent anthropogenic emissions of greenhouse gases** not controlled by the Montreal Protocol in all relevant sectors, including the *energy, transport, industry, agriculture, forestry and waste management sectors*
 
 .normal-font[
@@ -59,7 +167,8 @@ Source: [UNFCCC](https://unfccc.int/resource/docs/convkp/conveng.pdf)
 ]
 ]
 
-.panel[.panel-name[**UNFCCC II**]
+
+.panel[.panel-name[**UNFCCC III**]
 
 **Chapter 4 Commitment**
 
@@ -79,7 +188,7 @@ Source: [The New Urban Agenda](https://habitat3.org/the-new-urban-agenda/)
 ]
 ]
 
-.panel[.panel-name[**New Urban Agenda I**]
+.panel[.panel-name[**New Urban Agenda II**]
 
 * (75) We commit ourselves to encouraging national, subnational and local governments, as appropriate, to **develop sustainable, renewable and affordable energy and energy-efficient buildings and construction modes** and to promoting energy conservation and efficiency, which are essential to enable the **reduction of greenhouse gas** and black carbon emissions, ensure sustainable consumption and production patterns, help create new decent jobs, **improve public health** and reduce the costs of energy supply.
 
@@ -88,9 +197,9 @@ Source: [The New Urban Agenda](https://habitat3.org/the-new-urban-agenda/)
 ]
 ]
 
-.panel[.panel-name[**New Urban Agenda II**]
+.panel[.panel-name[**New Urban Agenda III**]
 
-* (79) We commit ourselves to promoting international, national, subnational and local climate action, including **climate change adaptation and mitigation**, and to supporting the efforts of cities and human settlements, their inhabitants and all local stakeholders as important implementers. We further commit ourselves to **supporting building resilience and reducing emissions of greenhouse gases** from all relevant sectors. Such measures should be consistent with the goals of the Paris Agreement adopted under the United Nations Framework Convention on Climate Change, including holding the increase in the global average temperature to well below 2 degrees Celsius above pre- industrial levels and pursuing efforts to limit the temperature increase to 1.5 degrees Celsius above pre-industrial levels.
+* (79) We commit ourselves to promoting international, national, subnational and local climate action, including **climate change adaptation and mitigation**, and to supporting the efforts of cities and human settlements, their inhabitants and all local stakeholders as important implementers. We further commit ourselves to **supporting building resilience and reducing emissions of greenhouse gases** from all relevant sectors. Such measures should be consistent with the goals of the Paris Agreement adopted under the United Nations Framework Convention on Climate Change.
 
 .normal-font[
 Source: [The New Urban Agenda](https://habitat3.org/the-new-urban-agenda/)
@@ -126,19 +235,19 @@ Source: [SDGs](https://sdgs.un.org/goals)
 ]
 
 ---
-## Policies: Local Actions I
+## Policies - Local Actions I
 
-*Location Actions Alignment: Mumbai Climate Action Plan 2022
+**Location Actions Alignment**: Mumbai Climate Action Plan 2022
 
-```{r xaringan-panelset, echo=FALSE}
+```{r xaringan-panelset-2, echo=FALSE}
 xaringanExtra::use_panelset()
 ```
 
 .panelset.sideways[
 .panel[.panel-name[**Air Quality**]
 
-```{r echo=FALSE, out.width='100%', fig.align='left'}
-knitr::include_graphics("img/MCAP2022AirQuality.png")
+```{r echo=FALSE, out.width='80%', fig.align='left'}
+knitr::include_graphics("Figure/Figure Part 1-2/MCAP2022AirQuality.png")
 ```
 
 .normal-font[
@@ -148,8 +257,8 @@ Source: [Mumbai Climate Action Plan 2022](https://ghhin.org/resources/mumbai-cli
 
 .panel[.panel-name[**Integrated Mobility**]
 
-```{r echo=FALSE, out.width='100%', fig.align='left'}
-knitr::include_graphics("img/MCAP2022IntegratedMobility.png")
+```{r echo=FALSE, out.width='70%', fig.align='left'}
+knitr::include_graphics("Figure/Figure Part 1-2/MCAP2022IntegratedMobility.png")
 ```
 
 .normal-font[Source: [Mumbai Climate Action Plan 2022](https://ghhin.org/resources/mumbai-climate-action-plan-2022/)
@@ -161,9 +270,9 @@ knitr::include_graphics("img/MCAP2022IntegratedMobility.png")
 
 ---
 
-## Policies: Local Actions II
+## Policies - Local Actions II
 
-*Location Actions Alignment: National Action Plan on Climate Change
+**Location Actions Alignment**: National Action Plan on Climate Change
 
 .panelset[
 .panel[.panel-name[**2.2.6. Clean Air Initiatives**]
@@ -200,7 +309,7 @@ Source: [Government of India](https://moef.gov.in/moef/division/environment-divi
 
 ---
 
-## Goals
+## Policies - Goals
 
 ### <span style="font-size:0.8em;">Enhancing Air Quality
 
@@ -220,7 +329,7 @@ Source: [Government of India](https://moef.gov.in/moef/division/environment-divi
 
 ---
 
-## Benefits to the City and Population
+## Policies - Benefits
 
 <span style="font-size:1.5em; font-weight:bold;">Health Benefits
 
@@ -241,131 +350,218 @@ Source: [Government of India](https://moef.gov.in/moef/division/environment-divi
   * Ensuring a safer, more inclusive urban environment for all citizens.
 
 ---
-# Why? The Necessity of a New Paradigm
+class: center, middle
+# Part 2 – 1 Proposal
 
-<div style="display: flex; align-items: center; justify-content: space-between;">
-  <div style="flex: 1; text-align: left;">
-    <!-- Your image goes here -->
-    <img src="./assets/APP2.png" style="width: 100%; height: auto;" alt="App Image">
+---
+## Proposal
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .container {
+    text-align: center; 
+    margin: 50px;
+  }
+
+  .green-box {
+    background-color: #4CAF50;
+    color: black;
+    padding: 60px;
+    margin: 20px auto;
+    font-size: 40px;
+  }
+
+  .arrow {
+    display: block;
+    margin: auto; 
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 30px solid #4CAF50;
+  }
+
+  .plan-text {
+    color: black;
+    margin: 80px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="green-box">
+    Our Plan
   </div>
-  <div style="flex: 1; padding-left: 30px; font-size: x-large;">
-  <!-- Your text goes here -->
-  Introduce the App UI
-</div>
+  <div class="arrow"></div>
+  <p class="plan-text">Dedicated to building an API or APP focused on information sharing and real-time monitoring of diversified air quality data in Mumbai and even across India</p>
 </div>
 
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
+</body>
+</html>
 
+---
+## Proposal - Key Question
+.pull-left[
+#### Why do you need to develop a project when already have a relevant testing platform?
+
+1. Currently, there are two largest air quality monitoring platforms (**AirAQI & AQI-IN**) in the world with a global audience and no focus on India.
+
+2. Few data samples (17 in Mumbai's main urban areas).
+
+3. Detection method is mainly based on sensors.
+
+3. Limitations of sensors: "Regional Coverage?" "Who Buy?" "Damaged?" "Maintenance?" "Mobile monitoring?"
+]
+.pull-right[
+```{r  echo=FALSE, out.width='110%', fig.align='center'}
+knitr::include_graphics('Figure/Figure Part 1-1/sensors in mumbai.png')
+```
+
+Source: [AQI-IN](https://www.aqi.in/dashboard/india/maharashtra/mumbai)
+]
+
+---
+class: center, middle
+# Part 2 – 2 Design Concept
+
+---
+## Design Concept
+```{r  echo=FALSE, out.width='110%', fig.align='center'}
+knitr::include_graphics('Figure/Other/concept.png')
 ```
 
 ---
-class: center, bottom
-background-image: url("./assets/APP2.png")
-background-size: cover
-# New Features Visualization
 
-<table>
-  <thead>
-    <tr>
-      <th>Feature</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Interactive Maps</td>
-      <td>Visualization</td>
-      <td>Identify pollution hotspots at a glance</td>
-    </tr>
-    <tr>
-      <td>Graphs and Charts</td>
-      <td>Visualization</td>
-      <td>Visualize trends and changes over time</td>
-    </tr>
-    <tr>
-      <td>Custom Alerts</td>
-      <td>Approach</td>
-      <td>Notifications for critical levels detected</td>
-    </tr>
-    <tr>
-      <td>Predict through change</td>
-      <td>Approach</td>
-      <td>Identify possible pollution hotspots after changing policy</td>
-    </tr>
-  </tbody>
-</table>
+## Design Concept – Objectives – Why
 
-
----
-
-# Case Study Spotlight: 
-
-AQI (https://www.aqi.in/dashboard/india/maharashtra/mumbai)
-
-[Move to another topic]
-
----
-# Output Utilization
-
-<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; text-align: center;">
+<br/>
+<div class="row">
+  <div class="col-md-6">
+  
+    <strong> Air-Quality </strong>
+    
     <ul style="list-style: inside;">
         <!-- Bullet point text goes here -->
-        <li><strong>Policy Suggestions:</strong> Provides recommendations based on data analysis, offering a path to healthier environments.</li>
+        <li>Air-conditioners reduce pollutants</li>
         <br/>
-        <li><strong>Actionable Reports:</strong> Delivers clear, concise, and compelling reports that can influence policy and public opinion.</li>
+        <li>Pollution levels fluctuate daily</li>
+        <br/>
+        <li> Remote sensing measurements + Policy support </li>
     </ul>
+
+  </div>
+  <div class="col-md-6">
+
+    <strong> Pollutants </strong>
+    
+    <ul style="list-style: inside;">
+        <!-- Bullet point text goes here -->
+        <li>Particulate Matter (PM)</li>
+        <br/>
+        <li>Nitrogen Oxides (NOx)</li>
+        <br/>
+        <li> Carbon dioxide (C02)</li>
+        <br/>
+        <li> Sulfur Dioxide (SO2) </li>
+        <br/>
+        <li> Causes of air pollution in Mumbai </li>
+    </ul>
+  </div>
 </div>
 
-## In detail...
+---
+
+## Design Concept – Objectives – Advantages
+
+<br/>
+<br/>
+
+.flexbox[
+  .box[
+    ![](./assets/angle-small-right.png)
+    **Air Quality Monitoring Station**
+    _Real-time_
+  ]
+  .box[
+    ![](./assets/angle-small-right.png)
+    **Pollution Control Measures**
+    _Multi-aspects_
+  ]
+]
+
+.flexbox[
+  .box[
+    ![](./assets/angle-small-right.png)
+    **Data Collection and Analysis**
+    _Accuracy and Historical data synthesis_
+  ]
+  .box[
+    ![](./assets/angle-small-right.png)
+    **Continuous Improvement Plan**
+  ]
+]
+
+---
+## Design Concept – Data Drive Action
+
+<div class="row">
+ Data Requirement 
+    
+    <ul style="list-style: inside;">
+        <!-- Bullet point text goes here -->
+        <li>New Data Addition: Seamlessly incorporates new data sets to keep the platform current and comprehensive.</li>
+        <br/>
+        <li>Enhanced Visualization: Innovative visual tools that translate complex data into actionable insights.</li>
+        <br/>
+        <li>Fresh Approach: Integrates with existing monitoring systems, enhancing them with new capabilities and perspectives.</li>
+        <br/>
+    </ul>
+
+</div>
+
+<br/>
+.center[
+![](./assets/table_feature.png)
+]
 
 ---
 
-# Data-Driven Action
+## Design Concept – Features
 
-Data Requirements and Integration
-
-- New Data Addition: Seamlessly incorporates new data sets to keep the platform current and comprehensive.
-
-- Enhanced Visualization: Innovative visual tools that translate complex data into actionable insights.
-
-- Fresh Approach: Integrates with existing monitoring systems, enhancing them with new capabilities and perspectives.
-
+<br/>
+<br/>
+.center[
+<img src="./img/App.png" style="width: 100%; transform: scale(1.2);" />
+]
 
 ---
-class: center
-
-# Tables for Data Requirements
-
-| Pollutant Type | Sources | Impact | Real-Time Detection | Historical Data |
-|----------|----------|----------|----------|----------|
-| CO2    | Industry     | Air Quality | Yes | 10 Years |
-
-
-| Existing Platform | Data Provided | Integration Method | New Capabilities |
-|----------|----------|----------|----------|----------|
-| Air Quality Index(AQI)    | AQI Levels | API Access | Real-Time Alerts |
+class: center, middle
+# Part 2 – 3 Technical Workflow
 
 ---
+## Technical Workflow – Data Drive Action
 
-# How to predict the air quality index selected by the user
-
-### The technical workflow behind the APP
+#### How to predict the air quality index selected by the user?
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
-knitr::include_graphics('img/technical_workflow.png')
+knitr::include_graphics('Figure/Figure Part 2-2/img/technical_workflow.png')
 ```
 
 ---
 
-# Data preparation stage
+## Technical Workflow – Data preparation stage 1
 
-### Three sources
+#### Three sources
 
 *1.* Air pollution data (air quality indicators)
 
-Source: AQI, monitoring station
+Source: AQI `r Citep(myBib,"AQI2022")`, CPCB (Indian official data) `r Citep(myBib,"CPCB2024")`,
+Sentinel 5 (TROPOMI provided)
 
 | Variable | Units | Effect |
 |----------|-------|--------|
@@ -373,11 +569,11 @@ Source: AQI, monitoring station
 
 ---
 
-# Data preparation stage 2
+## Technical Workflow – Data preparation stage 2
 
 *2.* Meteorological data 
 
-Source: AQI, monitoring station
+Source: AQI `r Citep(myBib,"AQI2022")`, India Meteorological Department `r Citep(myBib,"IndiaMeteorologicalDepartment2021")`
 
 Effect: Related studies `r Citep(myBib,"Liu2007", "Zhang2018")` show that meteorological variables can affect air quality
 
@@ -387,13 +583,13 @@ Effect: Related studies `r Citep(myBib,"Liu2007", "Zhang2018")` show that meteor
 | Relative humidity | Percentage |
 | Solar radiation | $W/m^{2}$ |
 | Wind speed | $m/s$ |
-| Precipitation|$Mm$ |
+| Precipitation| Mm |
 | Wind direction | Degrees |
 | Pressure | $Mb$ |
 
 ---
 
-# Data preparation stage 3
+## Technical Workflow – Data preparation stage 3
 
 *3.* Remote sensing data
 
@@ -409,7 +605,7 @@ Normalised difference vegetation index (NDVI), soil-adjusted vegetation index (S
 
 ---
 
-# Modelling stage
+## Technical Workflow – Modelling stage
 
 #### Predict air quality indicators using land use regression (LUR) models
 
@@ -437,21 +633,76 @@ Source: `r Citep(myBib,"Alvarez-Mendoza2019", "Lopez2023")`
 
 ---
 
-# Visualization stage
+## Technical Workflow – Visualization stage
 
-#### What is presented to the user is an interactive map
+#### What is presented to the user is an interactive map?
 
-Using geographical information from remote sensing data, prediction results can be displayed on an interactive map in real time.
+- Using geographic information system (GIS) technology, prediction results can be displayed on a real-time interactive map. 
 
-Similar visualization:
+- Users can choose to view different air quality indicators through different layers on the map.
+
+- Technical methods include using Google Maps API, open source library (Leaflet, ECharts).
+
 
 ```{r echo=FALSE, out.width='50%', fig.align='center'}
-knitr::include_graphics('img/visual_result.gif')
+# Similar visualization:
+# knitr::include_graphics('img/visual_result.gif')
+# Source: `r Citep(myBib,"UrbanEmissions.Info2024")`
 ```
 
-Source: `r Citep(myBib,"UrbanEmissions.Info2024")`
+---
+class: center, middle
+# Part 3 Project Timeline & Budge Breakdown & Future work
+
+---
+## Project Role
+The key roles will be listed in the table below :
+
+| Roles                                   |                                 |                               |                                        |
+|-----------------------------------------|---------------------------------------|-------------------------------------|-----------------------------------------------|
+| Project Manager(PM)                     | Mumbai Official(MO)                   | Legal Advisor(LA)                   | Data Analyst / Machine Learning Engineer      |
+| Database Administrator(DA)              | Web-service Backend Engineer(WB)      | Web Engineer                        | Test Engineer(TE)                             |
+
+---
+## Project Timeline
+```{r, echo=FALSE, out.width='78%', fig.align='center'}
+knitr::include_graphics("Figure/Figure Part 3/img/Gantt.jpg")
+```
+
+---
+## Budget Breakdown
+
+```{r, echo=FALSE, out.width='66%', fig.align='center'}
+knitr::include_graphics("Figure/Figure Part 3/img/budget.png")
+```
+
 ---
 
+## Future Work
+```{r, echo=FALSE, out.width='95%', fig.align='center'}
+knitr::include_graphics("Figure/Figure Part 3/img/future_work.png")
+```
+
+---
+
+# Summary
+The Mumbai government has already shown a significant commitment to addressing air pollution by implementing relevant policies and establishing the AQI monitoring platform. However, the current platform relies on `sensor data`, which poses `limitations in coverage` and incurs `high costs` due to the `restricted number of sensors`. Therefore, our project proposes an atmospheric pollution monitoring platform based on remote sensing data.
+
+Advantages of our Platform:
+
+* Combining remote sensing data with sensor data to `expand the effective monitoring range`.
+* Collaborating with the local AQI platform to `reduce monitoring costs`.
+* Contributing to `environmental assessments` and the `formulation of related policies`.
+* Enhancing Mumbai's `international reputation` in the field of environmental protection.
+
+
+
+
+
+
+
+
+---
 # References
 
 ```{r results='asis', echo=FALSE, warning=FALSE}
@@ -470,5 +721,3 @@ PrintBibliography(myBib, start = 6, end = 100)
 class: center, middle
 
 # Thanks!
-
-Our tool is not just an app; it's a movement towards a cleaner, safer, and more sustainable world. It's our commitment to the future of our planet. 🌱
