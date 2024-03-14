@@ -439,7 +439,6 @@ knitr::include_graphics('Figure/Other/concept.png')
 
 ## Design Concept – Objectives – Why
 
-<br/>
 <div class="row">
   <div class="col-md-6">
   
@@ -478,7 +477,6 @@ knitr::include_graphics('Figure/Other/concept.png')
 
 ## Design Concept – Objectives – Advantages
 
-<br/>
 <br/>
 
 .flexbox[
@@ -524,7 +522,6 @@ knitr::include_graphics('Figure/Other/concept.png')
 
 </div>
 
-<br/>
 .center[
 ![](./assets/table_feature.png)
 ]
