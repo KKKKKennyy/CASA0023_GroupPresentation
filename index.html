@@ -4,10 +4,10 @@
     <title>到时候再说 没力气想了</title>
     <meta charset="utf-8" />
     <meta name="author" content="" />
-    <meta name="date" content="2024-03-14" />
-    <script src="libs/header-attrs-2.25/header-attrs.js"></script>
-    <link href="libs/panelset-0.3.0/panelset.css" rel="stylesheet" />
-    <script src="libs/panelset-0.3.0/panelset.js"></script>
+    <meta name="date" content="2024-03-15" />
+    <script src="libs/header-attrs-2.26/header-attrs.js"></script>
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -27,7 +27,7 @@ class: center, middle, inverse, title-slide
 ### UCL
 ]
 .date[
-### 2024-03-14
+### 2024-03-15
 ]
 
 ---
@@ -528,11 +528,11 @@ class: center, middle
 
 ## Technical Workflow – Data preparation stage 1
 
-#### Three sources
+#### Three types of data
 
-*1.* Air pollution data (air quality indicators)
+*1.* Air pollution data (air quality index)
 
-Source: AQI ([AQI, 2022](#bib-AQI2022)), CPCB (Indian official data) ([CPCB, 2024](#bib-CPCB2024)),
+Source: AQI &lt;a name=cite-AQI2022&gt;&lt;/a&gt;([AQI, 2022](#bib-AQI2022)), CPCB (Indian official data) &lt;a name=cite-CPCB2024&gt;&lt;/a&gt;([CPCB, 2024](#bib-CPCB2024)),
 Sentinel 5 (TROPOMI provided)
 
 | Variable | Units | Effect |
@@ -543,11 +543,11 @@ Sentinel 5 (TROPOMI provided)
 
 ## Technical Workflow – Data preparation stage 2
 
-*2.* Meteorological data 
+*2.* Meteorological data
 
-Source: AQI ([AQI, 2022](#bib-AQI2022)), India Meteorological Department ([India Meteorological Department, 2021](#bib-IndiaMeteorologicalDepartment2021))
+Source: AQI ([AQI, 2022](#bib-AQI2022)), India Meteorological Department &lt;a name=cite-IndiaMeteorologicalDepartment2021&gt;&lt;/a&gt;([India Meteorological Department, 2021](#bib-IndiaMeteorologicalDepartment2021))
 
-Effect: Related studies ([Liu, Franklin, Kahn et al., 2007](#bib-Liu2007); [Zhang, Chu, Wang et al., 2018](#bib-Zhang2018)) show that meteorological variables can affect air quality
+Effect: Related studies &lt;a name=cite-Liu2007&gt;&lt;/a&gt;&lt;a name=cite-Zhang2018&gt;&lt;/a&gt;([Liu, Franklin, Kahn, and Koutrakis, 2007](#bib-Liu2007); [Zhang, Chu, Wang, and Zhang, 2018](#bib-Zhang2018)) show that meteorological variables can affect air quality
 
 | Variable | Units | 
 |----------|-------|
@@ -565,13 +565,13 @@ Effect: Related studies ([Liu, Franklin, Kahn et al., 2007](#bib-Liu2007); [Zhan
 
 *3.* Remote sensing data
 
-Landsat-8 data
+Landsat-8 data (high spatial resolution: 30m, many spectral bands: 11 bands)
 
 | Variable | Units | Effect |
 |----------|-------|--------|
 | Band 1-7 | Surface reflectance | Used to calculate other variables |
-| NDVI, SAVI, EVI | - | Vegetation is also related to air quality ([Jia, Liang, Zhang et al., 2014](#bib-Jia2014a); [Zhang, Hu, Lian et al., 2016](#bib-Zhang2016a)) |
-| LST | Degrees celsius | Related studies have also considered LST as a potential influencing factor ([Chen, Han, Chen et al., 2014](#bib-Chen2014)) |
+| NDVI, SAVI, EVI | - | Vegetation is also related to air quality &lt;a name=cite-Jia2014a&gt;&lt;/a&gt;&lt;a name=cite-Zhang2016a&gt;&lt;/a&gt;([Jia, Liang, Zhang, Wei, Yao, and Xie, 2014](#bib-Jia2014a); [Zhang, Hu, Lian, Fan, Ouyang, and Ye, 2016](#bib-Zhang2016a)) |
+| LST | Degrees celsius | Related studies have also considered LST as a potential influencing factor &lt;a name=cite-Chen2014&gt;&lt;/a&gt;([Chen, Han, Chen, and Tong, 2014](#bib-Chen2014)) |
 
 Normalised difference vegetation index (NDVI), soil-adjusted vegetation index (SAVI), enhanced vegetation index (EVI), land surface temperature (LST)
 
@@ -587,13 +587,13 @@ support vector regression (SVR), random forest regression (RFR)
 
 Model building process:
 
-- Select independent variables (user select )
+- Select independent variables (user select)
   
 - Select dependent variables, using Bayesian information criteria (BIC) 
   
 - Determine metrics (RMSE, `\(R^{2}\)`)
   
-- Divide the dataset into train, validation and test set, 
+- Divide the dataset into train, validation and test set
   
 - Spatial cross-validation
   
@@ -601,22 +601,24 @@ Model building process:
   
 - Execute prediction
 
-Source: ([Alvarez-Mendoza, Teodoro, and Ramirez-Cando, 2019](#bib-Alvarez-Mendoza2019); [López, 2023](#bib-Lopez2023))
+Source: &lt;a name=cite-Alvarez-Mendoza2019&gt;&lt;/a&gt;&lt;a name=cite-Lopez2023&gt;&lt;/a&gt;([Alvarez-Mendoza, Teodoro, and Ramirez-Cando, 2019](#bib-Alvarez-Mendoza2019); [López, 2023](#bib-Lopez2023))
 
 ---
 
 ## Technical Workflow – Visualization stage
 
-#### What is presented to the user is an interactive map?
+#### How to present the prediction results of the air pollution index to the user?
 
-- Using geographic information system (GIS) technology, prediction results can be displayed on a real-time interactive map. 
+- Using geographic information system (GIS) technology, prediction results can be displayed on a real-time interactive map
 
-- Users can choose to view different air quality indicators through different layers on the map.
+- Users can choose to view different air quality indicators through different layers on the map
 
-- Technical methods include using Google Maps API, open source library (Leaflet, ECharts).
+- Specific technical approaches include the use of the Google Maps API, open source libraries (Leaflet, ECharts), and so on
 
 
+&lt;img src="Figure/Figure Part 2-2/img/google_maps_api.png" width="35%" style="display: block; margin: auto;" /&gt;
 
+Source: &lt;a name=cite-Tamil2020&gt;&lt;/a&gt;([Tamil, 2020](#bib-Tamil2020))
 
 ---
 class: center, middle
@@ -667,52 +669,63 @@ Advantages of our Platform:
 ---
 # References
 
-&lt;a name=bib-Alvarez-Mendoza2019&gt;&lt;/a&gt;[Alvarez-Mendoza, C. I., A. Teodoro, and L.
-Ramirez-Cando](#cite-Alvarez-Mendoza2019) (2019). "Spatial Estimation of Surface Ozone
-Concentrations in Quito Ecuador with Remote Sensing Data, Air Pollution Measurements and
-Meteorological Variables". In: _Environmental Monitoring and Assessment_ 191.3, p. 155.
+&lt;a name=bib-Alvarez-Mendoza2019&gt;&lt;/a&gt;[Alvarez-Mendoza, C. I., A.
+Teodoro, and L. Ramirez-Cando](#cite-Alvarez-Mendoza2019) (2019).
+"Spatial Estimation of Surface Ozone Concentrations in Quito Ecuador
+with Remote Sensing Data, Air Pollution Measurements and Meteorological
+Variables". In: _Environmental Monitoring and Assessment_ 191.3, p.
+155.
 
-&lt;a name=bib-AQI2022&gt;&lt;/a&gt;[AQI](#cite-AQI2022) (2022). _India Air Quality Index (AQI) :
-Real-Time Air Pollution Level_.
+&lt;a name=bib-AQI2022&gt;&lt;/a&gt;[AQI](#cite-AQI2022) (2022). _India Air Quality
+Index (AQI) : Real-Time Air Pollution Level_.
 
-&lt;a name=bib-Chen2014&gt;&lt;/a&gt;[Chen, Y., W. Han, S. Chen, et al.](#cite-Chen2014) (2014).
-"Estimating Ground-Level PM2.5 Concentration Using Landsat 8 in Chengdu, China". In:
-_Remote Sensing of the Atmosphere, Clouds, and Precipitation V_. Vol. 9259. SPIE, pp.
+&lt;a name=bib-Chen2014&gt;&lt;/a&gt;[Chen, Y., W. Han, S. Chen, et
+al.](#cite-Chen2014) (2014). "Estimating Ground-Level PM2.5
+Concentration Using Landsat 8 in Chengdu, China". In: _Remote Sensing
+of the Atmosphere, Clouds, and Precipitation V_. Vol. 9259. SPIE, pp.
 193-206.
 
-&lt;a name=bib-CPCB2024&gt;&lt;/a&gt;[CPCB](#cite-CPCB2024) (2024). _CPCB \textbar Central Pollution
-Control Board_.
+&lt;a name=bib-CPCB2024&gt;&lt;/a&gt;[CPCB](#cite-CPCB2024) (2024). _CPCB \textbar
+Central Pollution Control Board_.
 
 &lt;a name=bib-IndiaMeteorologicalDepartment2021&gt;&lt;/a&gt;[India Meteorological
-Department](#cite-IndiaMeteorologicalDepartment2021) (2021). _Home \textbar India
-Meteorological Department_.
+Department](#cite-IndiaMeteorologicalDepartment2021) (2021). _Home
+\textbar India Meteorological Department_.
+
+&lt;a name=bib-Jia2014a&gt;&lt;/a&gt;[Jia, K., S. Liang, L. Zhang, et
+al.](#cite-Jia2014a) (2014). "Forest Cover Classification Using Landsat
+ETM+ Data and Time Series MODIS NDVI Data". In: _International Journal
+of Applied Earth Observation and Geoinformation_ 33, pp. 32-38.
+
+&lt;a name=bib-Liu2007&gt;&lt;/a&gt;[Liu, Y., M. Franklin, R. Kahn, et
+al.](#cite-Liu2007) (2007). "Using Aerosol Optical Thickness to Predict
+Ground-Level PM2.5 Concentrations in the St. Louis Area: A Comparison
+between MISR and MODIS". In: _Remote Sensing of Environment_.
+Multi-Angle Imaging SpectroRadiometer (MISR) Special Issue 107.1, pp.
+33-44.
 
 ---
 
 # References 2
 
-&lt;a name=bib-Jia2014a&gt;&lt;/a&gt;[Jia, K., S. Liang, L. Zhang, et al.](#cite-Jia2014a) (2014).
-"Forest Cover Classification Using Landsat ETM+ Data and Time Series MODIS NDVI Data".
-In: _International Journal of Applied Earth Observation and Geoinformation_ 33, pp.
-32-38.
+&lt;a name=bib-Lopez2023&gt;&lt;/a&gt;[López, S., ed.](#cite-Lopez2023) (2023).
+_Socio-Environmental Research in Latin America: Interdisciplinary
+Approaches Using GIS and Remote Sensing Frameworks_. The Latin American
+Studies Book Series. Cham: Springer International Publishing. ISBN:
+978-3-031-22679-3 978-3-031-22680-9.
 
-&lt;a name=bib-Liu2007&gt;&lt;/a&gt;[Liu, Y., M. Franklin, R. Kahn, et al.](#cite-Liu2007) (2007).
-"Using Aerosol Optical Thickness to Predict Ground-Level PM2.5 Concentrations in the St.
-Louis Area: A Comparison between MISR and MODIS". In: _Remote Sensing of Environment_.
-Multi-Angle Imaging SpectroRadiometer (MISR) Special Issue 107.1, pp. 33-44.
+&lt;a name=bib-Tamil2020&gt;&lt;/a&gt;[Tamil, R.](#cite-Tamil2020) (2020). _What Is
+Google Maps API and How To Use JavaScript SDK?_
 
-&lt;a name=bib-Lopez2023&gt;&lt;/a&gt;[López, S., ed.](#cite-Lopez2023) (2023). _Socio-Environmental
-Research in Latin America: Interdisciplinary Approaches Using GIS and Remote Sensing
-Frameworks_. The Latin American Studies Book Series. Cham: Springer International
-Publishing. ISBN: 978-3-031-22679-3 978-3-031-22680-9.
+&lt;a name=bib-Zhang2016a&gt;&lt;/a&gt;[Zhang, J., J. Hu, J. Lian, et
+al.](#cite-Zhang2016a) (2016). "Seeing the Forest from Drones: Testing
+the Potential of Lightweight Drones as a Tool for Long-Term Forest
+Monitoring". In: _Biological Conservation_ 198, pp. 60-69.
 
-&lt;a name=bib-Zhang2016a&gt;&lt;/a&gt;[Zhang, J., J. Hu, J. Lian, et al.](#cite-Zhang2016a) (2016).
-"Seeing the Forest from Drones: Testing the Potential of Lightweight Drones as a Tool for
-Long-Term Forest Monitoring". In: _Biological Conservation_ 198, pp. 60-69.
-
-&lt;a name=bib-Zhang2018&gt;&lt;/a&gt;[Zhang, X., Y. Chu, Y. Wang, et al.](#cite-Zhang2018) (2018).
-"Predicting Daily PM2.5 Concentrations in Texas Using High-Resolution Satellite Aerosol
-Optical Depth". In: _Science of The Total Environment_ 631-632, pp. 904-911.
+&lt;a name=bib-Zhang2018&gt;&lt;/a&gt;[Zhang, X., Y. Chu, Y. Wang, et
+al.](#cite-Zhang2018) (2018). "Predicting Daily PM2.5 Concentrations in
+Texas Using High-Resolution Satellite Aerosol Optical Depth". In:
+_Science of The Total Environment_ 631-632, pp. 904-911.
 
 ---
 class: center, middle

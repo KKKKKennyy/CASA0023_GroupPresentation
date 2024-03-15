@@ -556,9 +556,9 @@ knitr::include_graphics('Figure/Figure Part 2-2/img/technical_workflow.png')
 
 ## Technical Workflow – Data preparation stage 1
 
-#### Three sources
+#### Three types of data
 
-*1.* Air pollution data (air quality indicators)
+*1.* Air pollution data (air quality index)
 
 Source: AQI `r Citep(myBib,"AQI2022")`, CPCB (Indian official data) `r Citep(myBib,"CPCB2024")`,
 Sentinel 5 (TROPOMI provided)
@@ -571,7 +571,7 @@ Sentinel 5 (TROPOMI provided)
 
 ## Technical Workflow – Data preparation stage 2
 
-*2.* Meteorological data 
+*2.* Meteorological data
 
 Source: AQI `r Citep(myBib,"AQI2022")`, India Meteorological Department `r Citep(myBib,"IndiaMeteorologicalDepartment2021")`
 
@@ -593,7 +593,7 @@ Effect: Related studies `r Citep(myBib,"Liu2007", "Zhang2018")` show that meteor
 
 *3.* Remote sensing data
 
-Landsat-8 data
+Landsat-8 data (high spatial resolution: 30m, many spectral bands: 11 bands)
 
 | Variable | Units | Effect |
 |----------|-------|--------|
@@ -615,13 +615,13 @@ support vector regression (SVR), random forest regression (RFR)
 
 Model building process:
 
-- Select independent variables (user select )
+- Select independent variables (user select)
   
 - Select dependent variables, using Bayesian information criteria (BIC) 
   
 - Determine metrics (RMSE, $R^{2}$)
   
-- Divide the dataset into train, validation and test set, 
+- Divide the dataset into train, validation and test set
   
 - Spatial cross-validation
   
@@ -635,20 +635,20 @@ Source: `r Citep(myBib,"Alvarez-Mendoza2019", "Lopez2023")`
 
 ## Technical Workflow – Visualization stage
 
-#### What is presented to the user is an interactive map?
+#### How to present the prediction results of the air pollution index to the user?
 
-- Using geographic information system (GIS) technology, prediction results can be displayed on a real-time interactive map. 
+- Using geographic information system (GIS) technology, prediction results can be displayed on a real-time interactive map
 
-- Users can choose to view different air quality indicators through different layers on the map.
+- Users can choose to view different air quality indicators through different layers on the map
 
-- Technical methods include using Google Maps API, open source library (Leaflet, ECharts).
+- Specific technical approaches include the use of the Google Maps API, open source libraries (Leaflet, ECharts), and so on
 
 
-```{r echo=FALSE, out.width='50%', fig.align='center'}
-# Similar visualization:
-# knitr::include_graphics('img/visual_result.gif')
-# Source: `r Citep(myBib,"UrbanEmissions.Info2024")`
+```{r echo=FALSE, out.width='35%', fig.align='center'}
+knitr::include_graphics('Figure/Figure Part 2-2/img/google_maps_api.png')
 ```
+
+Source: `r Citep(myBib,"Tamil2020")`
 
 ---
 class: center, middle
@@ -706,7 +706,7 @@ Advantages of our Platform:
 # References
 
 ```{r results='asis', echo=FALSE, warning=FALSE}
-PrintBibliography(myBib, start = 1, end = 5)
+PrintBibliography(myBib, start = 1, end = 7)
 ```
 
 ---
@@ -714,7 +714,7 @@ PrintBibliography(myBib, start = 1, end = 5)
 # References 2
 
 ```{r results='asis', echo=FALSE, warning=FALSE}
-PrintBibliography(myBib, start = 6, end = 100)
+PrintBibliography(myBib, start = 8, end = 100)
 ```
 
 ---
