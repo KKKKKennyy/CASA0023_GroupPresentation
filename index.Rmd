@@ -617,13 +617,13 @@ Model building process:
 
 - Select independent variables (user select)
   
-- Select dependent variables, using Bayesian information criteria (BIC) 
+- Select dependent variables, using Bayesian information criteria (BIC) or variance inflation factor (VIF)
   
-- Determine metrics (RMSE, $R^{2}$)
+- Determine metrics (RMSE: root mean square error (RMSE), $R^{2}$: coeffcient of determination)
   
 - Divide the dataset into train, validation and test set
   
-- Spatial cross-validation
+- Spatial cross-validation (prevent spatial autocorrelation)
   
 - Train and test the four models, and choose a better model
   
