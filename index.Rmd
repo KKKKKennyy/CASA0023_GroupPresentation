@@ -597,8 +597,8 @@ Landsat-8 data (high spatial resolution: 30m, many spectral bands: 11 bands)
 
 | Variable | Units | Effect |
 |----------|-------|--------|
-| Band 1-7 | Surface reflectance | Used to calculate other variables |
-| NDVI, SAVI, EVI | - | Vegetation is also related to air quality `r Citep(myBib,"Jia2014a", "Zhang2016a")` |
+| Band 1-7 | Surface reflectance | Add more independent variables; Used to calculate other variables |
+| NDVI, SAVI, EVI | - | Vegetation index is related to air quality `r Citep(myBib,"Jia2014a", "Zhang2016a")` |
 | LST | Degrees celsius | Related studies have also considered LST as a potential influencing factor `r Citep(myBib,"Chen2014")` |
 
 Normalised difference vegetation index (NDVI), soil-adjusted vegetation index (SAVI), enhanced vegetation index (EVI), land surface temperature (LST)
