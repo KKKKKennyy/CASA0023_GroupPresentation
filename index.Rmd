@@ -607,7 +607,7 @@ Normalised difference vegetation index (NDVI), soil-adjusted vegetation index (S
 
 ## Technical Workflow – Modelling stage
 
-#### Predict air quality indicators using land use regression (LUR) models
+#### Predict air quality index using land use regression (LUR) models
 
 Four machine learning techniques: 
 multiple linear regression (MLR), multilayer perceptron (MLP), 
@@ -635,7 +635,7 @@ Source: `r Citep(myBib,"Alvarez-Mendoza2019", "Lopez2023")`
 
 ## Technical Workflow – Visualization stage
 
-#### How to present the prediction results of the air pollution index to the user?
+#### How to present the prediction results of the air quality index to the user?
 
 - Using geographic information system (GIS) technology, prediction results can be displayed on a real-time interactive map
 
