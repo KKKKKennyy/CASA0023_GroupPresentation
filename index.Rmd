@@ -69,7 +69,7 @@ class: center, middle
 
 ---
 ## Background - Location
-Located on the west coast of India. Financial centre, the largest city in India.
+Located on the west coast of India. Financial centre, the second largest city in India.
 
 ```{r echo=FALSE,out.width='55%',fig.align='center'}
 knitr::include_graphics('Figure/Figure Part 1-1/Location.png')
@@ -80,9 +80,9 @@ Source: [Kumar, 2020](https://www.researchgate.net/figure/Geographical-location-
 
 ---
 ## Background - Identified the Problem
-Industry, vehicles and buildings pollutants affected in Mumbai, which has a population of 12 million. The Swiss IQAir Group ranks Mumbai as the sixth most polluted city in the world.
+Air pollution in Mumbai has become a significant concern, particularly in the last decade, as the city has experienced an increase in pollution levels. The Swiss IQAir Group ranks Mumbai as the sixth most polluted city in the world.
 
-```{r echo=FALSE, out.width='100%', fig.align='center'}
+```{r echo=FALSE, out.width='90%', fig.align='center'}
 knitr::include_graphics('Figure/Figure Part 1-1/pi.png')
 ```
 
@@ -111,12 +111,14 @@ Source: [The Indian Express,2023](https://indianexpress.com/article/cities/mumba
 Source: [Anjana Pasricha,2023](https://www.voanews.com/a/mumbai-becomes-second-indian-mega-city-to-battle-dirty-air/7334181.html)
 ]
 
-.panel[.panel-name[**Transport and large-scale urban development**]
+.panel[.panel-name[**Transport and large-scale urban construction**]
 * **80%** of Mumbai's carbon emissions come from road transport.
 
 * Paved and unpaved roads **Dust**.
 
-* Dust pollution from subway construction accounts for **3%** of the total pollution.
+* **6,000 sites** with ongoing construction activities.
+
+* Dust pollution from metro construction accounts for **3%** of the total pollution.
 
 * Construction works account for **8%** of total emissions.
 
@@ -148,7 +150,7 @@ Source: [Times of India, 2023](https://timesofindia.indiatimes.com/india/is-wind
 | Aspect           | Details                                                                                                           |
 |------------------|-------------------------------------------------------------------------------------------------------------------|
 | **Economic**     | - Estimated annual loss of about $150 million (2021)<br>- Average claim amounts for infectious diseases increased from about INR 30,000 to nearly 80,000 (2023)<br>- Cost of treatment for common diseases requiring hospitalization doubled in five years (2023)<br>- Indian hotels and tourism industry suffered three-quarters of economic losses, estimated at 150 billion INR (2022) |
-| **Environmental**| - Mumbai, with a population of over 20 million, shrouded in heavy smog for consecutive days (2021)<br>- Over 90% live in areas where air quality is below WHO standards (2022)<br>- Multidimensional pollution affecting ecology, water sources, etc.<br>- High pollution causes losses of about $150 billion annually to Indian businesses (2021) |
+| **Environmental**| - Mumbai, with a population of over 20 million, shrouded in heavy smog for consecutive days (2021)<br>- Over 90% live in areas where air quality is below WHO standards (2022)<br>- Multidimensional pollution affecting ecology, water sources, etc.|
 | **Human Life**| - “Significant increase” in patients visiting for respiratory diseases (2022)<br>- 25% increase in outpatient cases related to such diseases (2023)<br>- Doctors deal with 4,000 cases of diphtheria and typhoid daily (2023)                                               |
 
 ---
