@@ -654,7 +654,7 @@ Source: `r Citep(myBib,"Alvarez-Mendoza2019", "Lopez2023")`
 
 - Using geographic information system (GIS) technology, prediction results can be displayed on a real-time interactive map
 
-- Users can choose to view different air quality indicators through different layers on the map
+- Users can choose to view different air quality index through different layers on the map
 
 - Specific technical approaches include the use of the Google Maps API, open source libraries (Leaflet, ECharts), and so on
 
