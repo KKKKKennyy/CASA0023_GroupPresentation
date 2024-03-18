@@ -693,10 +693,15 @@ knitr::include_graphics("Figure/Figure Part 3/img/budget.png")
 
 ---
 
-## Future Work
-```{r, echo=FALSE, out.width='95%', fig.align='center'}
-knitr::include_graphics("Figure/Figure Part 3/img/future_work.png")
-```
+## Future Works
+<br><br>
+
+| Future Works           | Estimated launch time |
+|-----------------------------------------|------------|
+| **Collaborate with local AQI platform** | Short-term |
+| Establish online public community       | Mid-term   |
+| Expand international cooperation        | Long-term  |
+| More data-driven services               | Long-term  |
 
 ---
 
