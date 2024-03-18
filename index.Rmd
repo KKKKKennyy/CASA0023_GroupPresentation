@@ -1,9 +1,4 @@
 ---
-title: " 到时候再说 没力气想了"
-subtitle: "Fuck"
-author: ""
-institute: "UCL"
-date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css  
@@ -48,6 +43,24 @@ style_duo_accent(
   secondary_color = "#FF961C",
   inverse_header_color = "#FFFFFF"
 )
+```
+
+class: center, title-slide, middle
+
+background-image: url("Figure/Other/in-mumbai pollution.jpg")
+background-size: cover
+background-position: center
+
+# <span style="color:white;">Breathing Life into Data: Revolutionizing Mumbai Air Quality with Smart Technology</span>
+## <span style="color:white;">CASA0023<br/>Group Project</span>
+### <span style="color:white;">Team XYZ</span>
+
+### <span style="color:white;">`r format(Sys.time(), "%d/%m/%Y")`</span>
+
+---
+## Contents
+```{r echo=FALSE,out.width='100%',fig.align='center'}
+knitr::include_graphics('Figure/Other/contents.png')
 ```
 
 ---
