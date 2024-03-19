@@ -149,7 +149,7 @@ Source: [Times of India, 2023](https://timesofindia.indiatimes.com/india/is-wind
 
 | Aspect           | Details                                                                                                           |
 |------------------|-------------------------------------------------------------------------------------------------------------------|
-| **Economic**     | - Estimated annual loss of about $150 million (2021)<br>- Average claim amounts for infectious diseases increased from about INR 30,000 to nearly 80,000 (2023)<br>- Cost of treatment for common diseases requiring hospitalization doubled in five years (2023)<br>- Indian hotels and tourism industry suffered three-quarters of economic losses, estimated at 150 billion INR (2022) |
+| **Economic**     | - Estimated annual loss of about $150 million (2021)<br>- Average claim amounts for infectious diseases increased from about INR 30,000 to nearly 80,000 (2023)<br>- Cost of treatment for common diseases requiring hospitalization doubled in five years (2023)|
 | **Environmental**| - Mumbai, with a population of over 20 million, shrouded in heavy smog for consecutive days (2021)<br>- Over 90% live in areas where air quality is below WHO standards (2022)<br>- Multidimensional pollution affecting ecology, water sources, etc.|
 | **Human Life**| - “Significant increase” in patients visiting for respiratory diseases (2022)<br>- 25% increase in outpatient cases related to such diseases (2023)<br>- Doctors deal with 4,000 cases of diphtheria and typhoid daily (2023)                                               |
 
@@ -425,9 +425,9 @@ class: center, middle
 ---
 ## Proposal - Key Question
 .pull-left[
-#### Why do you need to develop a project when already have a relevant testing platform?
+#### Why do we develop a project when already have one?
 
-1. Currently, there are two largest air quality monitoring platforms (**AirAQI & AQI-IN**) in the world with a global audience and no focus on India.
+1. Currently, Two largest air quality monitoring platforms (**AirAQI & AQI-IN**) in the world with a global range services and no focus on India.
 
 2. Few data samples (17 in Mumbai's main urban areas).
 
