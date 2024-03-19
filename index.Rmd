@@ -68,17 +68,6 @@ class: center, middle
 # Part 1 – 1 Background
 
 ---
-## Background - Location
-Located on the west coast of India. Financial centre, the second largest city in India.
-
-```{r echo=FALSE,out.width='55%',fig.align='center'}
-knitr::include_graphics('Figure/Figure Part 1-1/Location.png')
-```
-.normal-font[
-Source: [Kumar, 2020](https://www.researchgate.net/figure/Geographical-location-of-Mumbai-and-total-confirmed-cases-as-on-July-25-2020-This-map_fig1_344086001)
-]
-
----
 ## Background - Identified the Problem
 Air pollution in Mumbai has become a significant concern, particularly in the last decade, as the city has experienced an increase in pollution levels. The Swiss IQAir Group ranks Mumbai as the sixth most polluted city in the world.
 
